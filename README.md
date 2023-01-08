@@ -1,12 +1,10 @@
 # To-Do List
 
-## GIF of the project
-
-![GIF of the project](https://github.com/Chumbinho1/to-do-angular-app/blob/main/src/assets/gifs/to-do-angular-app.gif)
-
 [Live preview](https://sunny-souffle-2a6f18.netlify.app/)
 
 ## Image of the project
+
+![GIF of the project](https://github.com/Chumbinho1/to-do-angular-app/blob/main/src/assets/gifs/to-do-angular-app.gif)
 
 ![Image of the project](https://github.com/Chumbinho1/to-do-angular-app/blob/main/src/assets/images/to-do-angular-app.png)
 
