@@ -6,6 +6,6 @@
     {{ message }}
 </div>
 <div class="modal-footer">
-    <app-button [buttonConfig]="denyButtonConfig" (clickAction)="confirmOrDeny(false)"></app-button>
+    <app-button [buttonConfig]="denyButtonConfig" (clickAction)="confirmOrDeny(false)" appAutoFocus></app-button>
     <app-button [buttonConfig]="confirmButtonConfig" (clickAction)="confirmOrDeny(true)"></app-button>
 </div>
