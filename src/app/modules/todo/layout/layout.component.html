@@ -1,0 +1,27 @@
+<section class="container">
+    <article>
+        <section>
+            <h1 class="color-dark">Tarefas</h1>
+            <div class="card shadow">
+                <div class="card-body d-flex gap-1 p-1">
+                    <div>
+                        <app-button [buttonConfig]="newButtonConfig" [tooltipConfig]="newButtonTooltipConfig"
+                            (clickAction)="new()"></app-button>
+
+                    </div>
+                    <div>
+                        <app-button [buttonConfig]="deleteDoneTasksButtonConfig"
+                            [tooltipConfig]="DeleteDoneTasksButtonTooltipConfig"
+                            [disableCondition]="disableDeleteDoneTasksCondition"
+                            (clickAction)="deleteDoneTasks()"></app-button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+    <article class="mt-3">
+        <section>
+            <app-list-tasks [(tasks)]="tasks"></app-list-tasks>
+        </section>
+    </article>
+</section>

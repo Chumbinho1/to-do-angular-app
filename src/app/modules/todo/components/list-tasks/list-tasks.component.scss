@@ -1,0 +1,11 @@
+.max-card-body-size {
+    max-height: calc(100vh - 300px);
+    min-height: calc(100vh - 300px);
+}
+
+.list-group ::after {
+
+    -webkit-box-shadow: inset -1px -14px 12px -4px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow: inset -1px -14px 12px -4px rgba(0, 0, 0, 0.48);
+    box-shadow: inset -1px -14px 12px -4px rgba(0, 0, 0, 0.48);
+}

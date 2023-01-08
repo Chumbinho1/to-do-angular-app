@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h5 class="modal-title">{{ title }}</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+</div>
+<div class="modal-body">
+    <form [id]="formId" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <input type="hidden" formControlName="id">
+        <input type="hidden" formControlName="done" [value]="true">
+        <div>
+            <label class="form-label" for="task">Tarefa</label>
+            <textarea class="form-control" id="task" formControlName="task" rows="3" placeholder="Tarefa"></textarea>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <app-button [buttonConfig]="cancelButtonConfig" (clickAction)="close()"></app-button>
+
+    <app-button [buttonConfig]="saveButtonConfig"></app-button>
+</div>

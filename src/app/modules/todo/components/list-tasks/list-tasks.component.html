@@ -1,0 +1,41 @@
+<div class="card shadow overflow-hidden">
+    <div class="card-body p-1 my-2 max-card-body-size overflow-auto">
+        <ul class="list-group">
+            <ng-container *ngIf="tasks && tasks.length > 0">
+                <li class="list-group-item" *ngFor="let task of tasks">
+                    <div class="d-flex  justify-content-between align-items-center">
+                        <div class="d-flex gap-2 align-items-center">
+                            <div>
+                                <input class="form-check-input" type="checkbox" [value]="task.id" [checked]="task.done"
+                                    (click)="toggleSelect(task.id)" role="button">
+                            </div>
+                            <span class="text-break"
+                                [ngClass]="task.done ? ['text-decoration-line-through', 'text-muted']: ''">
+                                {{ task.task }}
+                            </span>
+                        </div>
+
+                        <div class="d-flex">
+                            <div>
+                                <app-button [buttonConfig]="editButtonConfig" [tooltipConfig]="editButtonTooltipConfig"
+                                    (clickAction)="edit(task.id)"></app-button>
+                            </div>
+                            <div class="ms-1">
+                                <app-button [buttonConfig]="deleteButtonConfig"
+                                    [tooltipConfig]="deleteButtonTooltipConfig"
+                                    (clickAction)="delete(task.id)"></app-button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ng-container>
+            <ng-container *ngIf="tasks === null || tasks.length === 0">
+                <li class="list-group-item text-center">
+                    <span>
+                        Nenhuma Tarefa Cadastrada!
+                    </span>
+                </li>
+            </ng-container>
+        </ul>
+    </div>
+</div>
