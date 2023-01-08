@@ -38,7 +38,6 @@ export class AddEditTaskFormComponent implements OnInit {
       if (this._reloadDatas) this._reloadDatasService.reloadDatasEvent();
     });
     this.buildForm();
-    console.log(this.saveButtonConfig)
   }
 
   private buildForm() {
@@ -69,9 +68,7 @@ export class AddEditTaskFormComponent implements OnInit {
       .get('tasks')
       .subscribe((tasksList: Task[]) => {
         const tasks: Task[] = tasksList;
-        console.log(tasks[tasks.findIndex(task => task.id === id)])
         const task = tasks[tasks.findIndex(task => task.id === id)];
-        console.log(task)
 
         this.form.patchValue(task);
       });
