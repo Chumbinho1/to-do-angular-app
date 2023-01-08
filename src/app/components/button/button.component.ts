@@ -12,6 +12,7 @@ export class ButtonComponent implements IButton {
   @Input() buttonConfig: IButtonConfig = {};
   @Input() tooltipConfig: TooltipProprieties = {};
   @Input() disableCondition: boolean = false;
+  @Input() autoFocus: boolean = false;
 
   @Output() clickAction: EventEmitter<boolean> = new EventEmitter<boolean>();
 

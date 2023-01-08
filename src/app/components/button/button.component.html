@@ -1,7 +1,8 @@
 <button [type]="buttonConfig.type ? buttonConfig.type : 'button'"
     [attr.form]="buttonConfig.formId ? buttonConfig.formId: ''" [ngClass]="buttonConfig.classes"
     [tooltip]="tooltipConfig.label" [placement]="tooltipConfig.placement ? tooltipConfig.placement : 'auto'"
-    [container]="tooltipConfig.container" [disabled]="disableCondition" (click)="onClickEvent()">
+    [container]="tooltipConfig.container" [disabled]="disableCondition" (click)="onClickEvent()" appAutoFocus
+    [focusCondition]="autoFocus">
     <i [ngClass]="buttonConfig.icon"></i>
     <span [ngClass]="buttonConfig.hideButtonLabelClass">
         {{ buttonConfig.label }}
