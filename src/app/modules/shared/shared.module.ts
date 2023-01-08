@@ -6,12 +6,15 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ButtonComponent } from 'src/app/components/button/button.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmModalComponent } from 'src/app/components/modals/confirm-modal/confirm-modal.component';
+import { AutoFocusDirective } from 'src/app/directives/auto-focus.directive';
 
 
 @NgModule({
   declarations: [
     ButtonComponent,
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    AutoFocusDirective,
+
   ],
   imports: [
     CommonModule,
@@ -23,6 +26,8 @@ import { ConfirmModalComponent } from 'src/app/components/modals/confirm-modal/c
     ReactiveFormsModule,
     TooltipModule,
     ModalModule,
+
+    AutoFocusDirective,
 
     ButtonComponent
   ]
